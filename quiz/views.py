@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
-def start(request):
+def startpage(request):
 	return render(request, "start.html")
 
-def quize(request, quiz_number):
-	return render(request, "quize.html")
+def quiz(request, quiz_number):
+	return render(request, "quiz.html")
 
-def questions(request, quiz_number, question_number):
+def question(request, quiz_number, question_number):
 	return render(request, "questions.html")
 
-def results(request, quiz_number):
+def completed(request, quiz_number):
 	return render(request, "results.html")
