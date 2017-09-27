@@ -32,9 +32,16 @@ def quiz(request, quiz_number):
 	}
 	return render(request, "quize.html", context)
 
-
 def question(request, quiz_number, question_number):
-	return render(request, "questions.html")
+	context = {
+		"question_number": question_number,
+	    "question": "Vad kallades internet för?",
+		"answer1": "ARPANET",
+	   	"answer2": "APNET",
+	    "answer3": "World wide web",
+	    "quiz_number": quiz_number,
+	}
+	return render(request, "questions.html", context)
 
 def completed(request, quiz_number):
 	return render(request, "results.html")

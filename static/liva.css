@@ -12,13 +12,15 @@ h1 {
 
 h2 {
 	color: black;
-	font-size: 200pt;
+	font-size: 150pt;
 } 
+
 a {
 	color: black;
 	font-size: 40pt;
 	font: Gerstner Programm light;
 }
+
 .footer {
   position: fixed;
   right: 0;
