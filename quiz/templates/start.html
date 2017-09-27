@@ -38,9 +38,13 @@
 			</div>
 			{% endif %}
 			{% if quiz.quiz_number == 3 %}
+				<br>
+				<br>
 				<a href="{% url 'quiz_page' quiz.quiz_number %}">{{ quiz.name }}</a>
 			{% endif %}	
 		{% endfor %}
+		<br>
+		<br>
 		<br>
 		<br>
 	</p>
