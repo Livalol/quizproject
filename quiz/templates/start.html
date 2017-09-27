@@ -20,20 +20,27 @@
 		<img src="/static/Liva.jpg" width="800" height="536" alt="Fel"/>
 	
 		I så fall här finns ett quize för dig som du kan öva på! 
-
-		<div class="row"">
-			<div class="col-md-2 column1">
-				<a href="quize.html">Know your history</a> 	
+		
+		{% for quiz in quizzes %}
+			{% if quiz.quiz_number == 1 %}
+			<div class="row"">
+				<div class="col-md-2 column1">
+					<a href="quize.html">{{ quiz.name }}</a> 	
+				</div>
+				<div class="col-md-4 column2">
+					<img src="/static/PNG7.png" width="800" height="400" alt="Fel" title="Liva&Sofie"/>
+				</div>
+			{% endif %}
+			{% if quiz.quiz_number == 2 %}
+				<div class="col-md-6 column3">
+				<a href="quize.html">{{ quiz.name }}</a>
+				</div>
 			</div>
-			<div class="col-md-4 column2">
-				<img src="/static/PNG7.png" width="800" height="400" alt="Fel" title="Liva&Sofie"/>
-			</div>
-			<div class="col-md-6 column3">
-				<a href="quize.html">Unless you know the code, it has no meaning </a>
-			</div>
-		<br>
-		</div>
-		<a href="quize.html">What about AI?</a>
+			{% endif %}
+			{% if quiz.quiz_number == 3 %}
+				<a href="quize.html">{{ quiz.name }}</a>
+			{% endif %}	
+		{% endfor %}
 		<br>
 		<br>
 	</p>
