@@ -4,7 +4,7 @@ def startpage(request):
 	return render(request, "start.html")
 
 def quiz(request, quiz_number):
-	return render(request, "quiz.html")
+	return render(request, "quize.html")
 
 def question(request, quiz_number, question_number):
 	return render(request, "questions.html")
