@@ -25,7 +25,7 @@
 			{% if quiz.quiz_number == 1 %}
 			<div class="row"">
 				<div class="col-md-2 column1">
-					<a href="quize.html">{{ quiz.name }}</a> 	
+					<a href="{% url 'quiz_page' quiz.quiz_number %}">{{ quiz.name }}</a> 	
 				</div>
 				<div class="col-md-4 column2">
 					<img src="/static/PNG7.png" width="800" height="400" alt="Fel" title="Liva&Sofie"/>
@@ -33,12 +33,12 @@
 			{% endif %}
 			{% if quiz.quiz_number == 2 %}
 				<div class="col-md-6 column3">
-				<a href="quize.html">{{ quiz.name }}</a>
+				<a href="{% url 'quiz_page' quiz.quiz_number %}">{{ quiz.name }}</a>
 				</div>
 			</div>
 			{% endif %}
 			{% if quiz.quiz_number == 3 %}
-				<a href="quize.html">{{ quiz.name }}</a>
+				<a href="{% url 'quiz_page' quiz.quiz_number %}">{{ quiz.name }}</a>
 			{% endif %}	
 		{% endfor %}
 		<br>

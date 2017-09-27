@@ -14,7 +14,10 @@ h2 {
 	color: black;
 	font-size: 150pt;
 } 
-
+h3 {
+	color: black;
+	font-size: 100pt;
+} 
 a {
 	color: black;
 	font-size: 40pt;
@@ -37,3 +40,4 @@ a {
   font: Gerstner Program ligh;
   font-size: 7pt;
 } 
+
