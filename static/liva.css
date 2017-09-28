@@ -1,10 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 body {
 	background: #0065C1;
 	font-size: 100%;
-	font-family: "Noto Serif", serif;
+	font-family: 'Inconsolata', monospace;
 	max-width: 600px;
 	margin: 0 auto;
 } 
@@ -29,13 +29,13 @@ h4 {
 a {
 	color: black;
 	font-size: 40pt;
-	font: Gerstner Programm light;
+	font: Inconsolata;
 }
 
 a:hover {
 	color: #BE052D;
 	font-size: 40pt;
-	font: Gerstner Programm light;
+	font: Inconsolata;
 }
 
 button {
@@ -63,17 +63,17 @@ button {
   padding: 1rem;
   background-color: #FED053;
   text-align: left;
-  font: Gerstner Program ligh;
+  font: Inconsolata;
   font-size: 7pt;
 }
 .footer a {
 	text-align: left;
-  	font: Gerstner Program ligh;
+  	font: Inconsolata;
   	font-size: 7pt;
 } 
 
 /*Detta hanterar radio*/
-*{font-family: "Noto Serif", serif;}
+*{font-family: "Inconsolata", serif;}
 
 @keyframes click-wave {
   0% {
