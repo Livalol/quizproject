@@ -22,8 +22,6 @@ from django.shortcuts import render
 # 		"gif": "https://media.giphy.com/media/BdrSy2gqURFEk/giphy.gif",
 # 	},
 # ]
-
-
 def startpage(request):
 	context = {
 		"quizzes": Quiz.objects.all(),
@@ -32,19 +30,25 @@ def startpage(request):
 
 def quiz(request, quiz_number):
 	context = {
-		"quiz": quizzes[quiz_number - 1],
+		"quiz": Quiz.objects.get(quiz_number=quiz_number),
 		"quiz_number": quiz_number,
 	}
 	return render(request, "quize.html", context)
 
 def question(request, quiz_number, question_number):
+	quiz = Quiz.objects.get(quiz_number=quiz_number)
+	questions = quiz.questions.all()
+	question = questions[question_number - 1]
 	context = {
 		"question_number": question_number,
-	    "question": "Vad kallades internet för?",
-		"answer1": "ARPANET",
-	   	"answer2": "APNET",
-	    "answer3": "World wide web",
-	    "quiz_number": quiz_number,
+    	"question": question.question,
+	    "answer1": question.answer1,
+    	"answer2": question.answer2,
+	    "answer3": question.answer3,
+	    "gif": question.gif,
+	    "quiz": quiz,
+		"quiz_number": quiz_number,
+
 	}
 	return render(request, "questions.html", context)
 
