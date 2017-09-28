@@ -1,5 +1,4 @@
 from django.db import models
-
 # Create your models here. Skapa en import av all data. Hämta alla quiz och skapa en class
 
 class Quiz(models.Model):
