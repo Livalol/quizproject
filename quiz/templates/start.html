@@ -42,6 +42,8 @@
 				<br>
 				<a href="{% url 'quiz_page' quiz.quiz_number %}">{{ quiz.name }}</a>
 			{% endif %}	
+			{% empty %}
+				<p><em>syntax error</em></p>
 		{% endfor %}
 		<br>
 		<br>
