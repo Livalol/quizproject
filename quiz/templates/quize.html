@@ -13,7 +13,13 @@
 		<p>{{ quiz.description }}</p>
 		<!-- <img src ="{{ quiz.gif }}"/> -->
 		<img src="/static/PNG1.png">
-		<a href="{% url 'question_page' quiz_number 1 %}">Starta</a>
+		<div class="row">
+  			<div class="col-md-9">
+  			</div>
+  			<div class="col-md-3">
+    		<a href="{% url 'question_page' quiz_number 1 %}">Starta</a>
+  			</div>
+		</div>
 		<br>
 		<br>
 		<br>
