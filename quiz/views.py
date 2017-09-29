@@ -41,9 +41,11 @@ def completed(request, quiz_number):
 		if correct_answer == answer:
 			num_correct_answers = num_correct_answers + 1
 	num_questions = quiz.questions.count()
+	percent = num_correct_answers/num_questions
 	context = {
 		"correct": num_correct_answers,
 		"total": num_questions,
+		"percent": percent,
 	}
 	return render(request, "results.html", context)
 
