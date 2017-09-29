@@ -16,6 +16,22 @@
 		<br>
 		<br>
 		<button type="button"> <a href="{% url 'start_page' %}">More quiz</a></button>
+
+		{% for quiz in quizzes %}
+			{% if correct == total %}
+				<h3>Du är en hacker {{ correct }} av {{ total }}</h3>
+				<img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif"/>
+			{% endif %}
+			{% if correct >= total/2 %}
+				<h3>Du är på godväg till att bli en hacker, kämpa på {{ correct }} av {{ total }}</h3>
+				<img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif"/>
+			{% endif %}
+			{% if correct <= total/2 %}
+				<h3>Du kan ju inte alls data {{ correct }} av {{ total }}</h3>
+				<img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif"/>
+			{% endif %}
+		{% endfor %}
+
 <script src="js/bootstrap.min.js"></script>
 		<div class="footer">
 			<a href="https://doberman.io/thoughts/100-tjejer-kodar-in-barcelona">doberman.io</a>
