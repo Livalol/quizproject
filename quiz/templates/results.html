@@ -12,12 +12,15 @@
 		{% if percent == 1 %}
 			<h3>Du är en hacker, du fick {{ correct }} av {{ total }}</h3>
 			<img src="https://media.giphy.com/media/eCqFYAVjjDksg/giphy.gif"/>
+			<br>
 		{% elif percent >= 0.5 %}
 			<h3>Du är på godväg till att bli en hacker, kämpa på. Du fick {{ correct }} av {{ total }}</h3>
 			<img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif"/>
+			<br>
 		{% else %}
 			<h3>Du kan ju inte alls hacka du fick bara {{ correct }} av {{ total }}</h3>
 			<img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif"/>
+			<br>
 		{% endif %}
 		<button type="button"> <a href="{% url 'start_page' %}">More quiz</a></button>
 		<br>
