@@ -11,19 +11,27 @@ body {
 h1 {
 	color: black;
 	font-size: 20vw;
+  margin: 20px; 
+  padding: 40px;
 } 
 
 h2 {
 	color: black;
 	font-size: 10vw;
+  margin: 20px; 
+  padding: 40px;
 } 
 h3 {
 	color: black;
 	font-size: 5vw;
+  margin: 20px; 
+  padding: 40px;
 } 
 h4 {
   color: black;
   font-size: 15pt;
+  margin: 20px; 
+  padding: 40px;
 } 
 
 a {
